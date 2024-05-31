@@ -49,7 +49,7 @@ const App: React.FC = () => {
         </div>
         <div className="nav-item">
           <FaTasks size={24} />
-          <span>Task</span>
+          <span>Task</span>  
         </div>
         <div className="nav-item">
           <FaRocket size={24} />
