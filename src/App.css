@@ -59,9 +59,10 @@
   right: 0;
   display: flex;
   justify-content: space-around;
-  background-color: #333;
+  background-color: rgb(153, 114, 5);
   padding: 10px 0;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -2px 5px rgba(19, 19, 19, 0.3);
+  border-radius: 10px;
 }
 
 .nav-item {
@@ -111,5 +112,19 @@
 
   .nav-item {
     font-size: 0.7rem;
+    padding: 10px;
   }
+}
+
+
+.active {
+  border: #a79107f6 solid 2px;
+  /* padding: 5px; */
+  border-radius: 10px;
+  padding-inline: 20px;
+}
+
+.title {
+  margin-right: 10px;
+  color: rgb(205, 205, 203);
 }

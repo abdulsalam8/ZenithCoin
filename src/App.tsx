@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import { FaRegStar, FaTasks, FaRocket, FaChartBar } from 'react-icons/fa';
-import Logo from './assets/logo.png'; // Ensure the path is correct
+import { FaRegStar, FaTasks, FaRocket, FaChartBar, FaTrophy } from 'react-icons/fa';
+import Logo from './assets/logo.png';
 
 const MAX_ENERGY = 3000;
-const REFILL_RATE = 50; // Amount of energy refilled per interval
-const REFILL_INTERVAL = 1000; // Interval in milliseconds
+const REFILL_RATE = 50; 
+const REFILL_INTERVAL = 1000;
 
 const App: React.FC = () => {
   const [count, setCount] = useState<number>(0);
@@ -36,6 +36,7 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <h1 className="counter">{(count / 1000).toFixed(3)} M</h1>
+      <h3 > <FaTrophy className='title' />{""}Elite {">"} </h3>
       
       <img src={Logo} alt="Logo" className="logo" onClick={handleImageClick} />
       <div className="energy-bar">
@@ -43,7 +44,7 @@ const App: React.FC = () => {
       </div>
         <b style={{color:"white"}}>{energy}</b>
       <nav className="bottom-nav">  
-        <div className="nav-item">
+        <div className="nav-item active">
           <FaRegStar size={24} />
           <span>Ref</span>
         </div>
