@@ -9219,7 +9219,7 @@ function Ip(e) {
     ],
   })(e);
 }
-const Mp = "/assets/logo-2e8fd5c5.png",
+const Mp = "./assets/logo-2e8fd5c5.png",
   wo = 3e3,
   jp = 50,
   Rp = 1e3,
