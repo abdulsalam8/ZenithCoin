@@ -3,40 +3,113 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #282c34;
+}
+
+.app {
+  text-align: center;
+  /* padding: 50px; */
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.counter {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.energy-bar {
+  width: 80%;
+  height: 20px;
+  background-color: #555;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.energy {
+  height: 100%;
+  background-color: #76c7c0;
+  transition: width 0.3s ease;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo.pop {
+  transform: scale(1.2);
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.nav-item span {
+  margin-top: 4px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .counter {
+    font-size: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo {
+    width: 80%;
+  }
+
+  .bottom-nav {
+    padding: 8px 0;
+  }
+
+  .nav-item {
+    font-size: 0.8rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .counter {
+    font-size: 2rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .logo {
+    width: 100%;
+  }
 
-.read-the-docs {
-  color: #888;
+  .bottom-nav {
+    padding: 6px 0;
+  }
+
+  .nav-item {
+    font-size: 0.7rem;
+  }
 }
