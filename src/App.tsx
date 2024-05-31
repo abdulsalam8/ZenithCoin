@@ -42,7 +42,7 @@ const App: React.FC = () => {
         <div className="energy" style={{ width: `${(energy / MAX_ENERGY) * 100}%` }}></div>
       </div>
         <b style={{color:"white"}}>{energy}</b>
-      <nav className="bottom-nav">
+      <nav className="bottom-nav">  
         <div className="nav-item">
           <FaRegStar size={24} />
           <span>Ref</span>
