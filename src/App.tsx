@@ -35,7 +35,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <h1 className="counter">{(count / 1000).toFixed(3)} M</h1>
+      <h1 className="counter">{(count)} M</h1>
       <h3 > <FaTrophy className='title' />{""}Elite {">"} </h3>
       
       <img src={Logo} alt="Logo" className="logo" onClick={handleImageClick} />
