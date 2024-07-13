@@ -19,6 +19,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -47,9 +48,13 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
+  border-width: 20px;
+  box-shadow: 2px 2px 2px #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -60,10 +65,40 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+.coin-button {
+  background: linear-gradient(to bottom right, #1e1e1e, #3f3f3f);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  /* border: 2px solid darkgoldenrod; */
+  border-color: #646cff;
+  border-width: 20px;
+  box-shadow: 2px 2px 2px #646cff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.touch-area {
+  /* position: absolute; */
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
 }

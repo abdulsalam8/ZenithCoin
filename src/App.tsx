@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { FaRegStar, FaTasks, FaRocket, FaChartBar, FaTrophy } from 'react-icons/fa';
 import Logo from './assets/logo.png';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import CoinButton from './CoinButton';
 
 const MAX_ENERGY = 3000;
 const REFILL_RATE = 50; 
@@ -10,11 +13,15 @@ const REFILL_INTERVAL = 1000;
 const App: React.FC = () => {
   const [count, setCount] = useState<number>(0);
   const [energy, setEnergy] = useState<number>(MAX_ENERGY);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setEnergy((prevEnergy) => Math.min(prevEnergy + REFILL_RATE, MAX_ENERGY));
     }, REFILL_INTERVAL);
+
+    // Simulate loading delay
+    setTimeout(() => setLoading(false), 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -35,22 +42,24 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <h1 className="counter">{(count)} M</h1>
-      <h3 > <FaTrophy className='title' />{""}Elite {">"} </h3>
+      <h1 className="counter">{loading ? <Skeleton width={100} /> : `${count} M`}</h1>
+      {/* <h3>
+        <FaTrophy className="title" /> Elite {">"}
+      </h3> */}
       
-      <img src={Logo} alt="Logo" className="logo" onClick={handleImageClick} />
-      <div className="energy-bar">
+      <CoinButton />
+      {/* <div className="energy-bar">
         <div className="energy" style={{ width: `${(energy / MAX_ENERGY) * 100}%` }}></div>
-      </div>
-        <b style={{color:"white"}}>{energy}</b>
-      <nav className="bottom-nav">  
+      </div> */}
+      {/* <b style={{ color: "white" }}>{loading ? <Skeleton width={50} /> : energy}</b> */}
+      <nav className="bottom-nav">
         <div className="nav-item active">
           <FaRegStar size={24} />
           <span>Ref</span>
         </div>
         <div className="nav-item">
           <FaTasks size={24} />
-          <span>Task</span>  
+          <span>Task</span>
         </div>
         <div className="nav-item">
           <FaRocket size={24} />
@@ -63,6 +72,6 @@ const App: React.FC = () => {
       </nav>
     </div>
   );
-}
+};
 
 export default App;

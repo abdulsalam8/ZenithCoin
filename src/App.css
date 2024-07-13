@@ -1,22 +1,25 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
   text-align: center;
-  background-color: #282c34;
+  /* padding: 0; */
+  /* background-color: #747bff; */
 }
 
 .app {
   text-align: center;
   /* padding: 50px; */
 
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 0;
+  margin: 0;
 }
 
 .counter {
@@ -59,7 +62,7 @@
   right: 0;
   display: flex;
   justify-content: space-around;
-  background-color: rgb(153, 114, 5);
+  background-color: #747bff;
   padding: 10px 0;
   box-shadow: 0 -2px 5px rgba(19, 19, 19, 0.3);
   border-radius: 10px;
