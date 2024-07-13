@@ -14,7 +14,15 @@ const App: React.FC = () => {
   const [count, setCount] = useState<number>(0);
   const [energy, setEnergy] = useState<number>(MAX_ENERGY);
   const [loading, setLoading] = useState<boolean>(true);
+  const disableScroll = () => {
+    document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
+  };
 
+  const enableScroll = () => {
+    document.body.classList.remove('no-scroll');
+    document.documentElement.classList.remove('no-scroll');
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setEnergy((prevEnergy) => Math.min(prevEnergy + REFILL_RATE, MAX_ENERGY));
@@ -40,9 +48,16 @@ const App: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    return () => {
+      enableScroll();
+    };
+  }, []);
+
+
   return (
     <div className="app">
-      <h1 className="counter">{loading ? <Skeleton width={100} /> : `${count} M`}</h1>
+      {/* <h1 className="counter">{loading ? <Skeleton width={100} /> : `${count} M`}</h1> */}
       {/* <h3>
         <FaTrophy className="title" /> Elite {">"}
       </h3> */}
