@@ -41,7 +41,7 @@ function setClass(node, className) {
 }
   return (
     <div className="container stage">
-      <div className="container">
+      {/* <div className="container">
         <div className="tabbar tab-style3">
           <ul className="flex-center">
             <li className="home active" data-where="home">
@@ -62,9 +62,9 @@ function setClass(node, className) {
             <li className="follow"> </li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
-      <div className="container">
+      {/* <div className="container">
         <div className="tabbar tab-style2">
           <ul className="flex-center">
             <li className="home active" data-where="home">
@@ -84,7 +84,7 @@ function setClass(node, className) {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       <div className="container">
         <div className="tabbar tab-style1">
@@ -109,7 +109,7 @@ function setClass(node, className) {
         </div>
       </div>
 
-      <div className="container">
+      {/* <div className="container">
         <div className="tabbar tab-style4">
           <ul className="flex-center">
             <li className="home active" data-where="home">
@@ -129,9 +129,9 @@ function setClass(node, className) {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
-      <div className="container">
+      {/* <div className="container">
         <div className="tabbar tab-style5">
           <ul className="flex-center">
             <li className="home active" data-where="home">
@@ -151,7 +151,7 @@ function setClass(node, className) {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

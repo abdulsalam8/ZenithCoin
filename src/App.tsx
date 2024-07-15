@@ -54,23 +54,23 @@ const App: React.FC = () => {
       </div> */}
       {/* <b style={{ color: "white" }}>{loading ? <Skeleton width={50} /> : energy}</b> */}
       {/* <BottomBar /> */}
-      <BottomBar />
+      {/* <BottomBar /> */}
       <nav className="bottom-nav">
         <div className="nav-item active">
           <FaRegStar size={24} />
-          <span>Ref</span>
+          {/* <span>Ref</span> */}
         </div>
         <div className="nav-item">
           <FaTasks size={24} />
-          <span>Task</span>
+          {/* <span>Task</span> */}
         </div>
         <div className="nav-item">
           <FaRocket size={24} />
-          <span>Boost</span>
+          {/* <span>Boost</span> */}
         </div>
         <div className="nav-item">
           <FaChartBar size={24} />
-          <span>Stats</span>
+          {/* <span>Stats</span> */}
         </div>
       </nav>
     </div>

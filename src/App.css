@@ -75,6 +75,7 @@ html.no-scroll {
   border-radius: 10px;
   -webkit-tap-highlight-color: transparent;
   outline: none;
+  overflow: hidden;
 }
 
 .nav-item {
@@ -138,10 +139,10 @@ html.no-scroll {
 
 
 .active {
-  /* border: #a79107f6 solid 2px; */
+  border: #a79107f6 solid 2px;
   /* padding: 5px; */
-  /* border-radius: 10px;
-  padding-inline: 20px; */
+  border-radius: 10px;
+  padding-inline: 20px;
 }
 
 .title {

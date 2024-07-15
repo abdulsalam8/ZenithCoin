@@ -73,7 +73,7 @@ const CoinButton: React.FC = () => {
       onTouchEnd={handleTouchEnd}
     >
       <button className="coin-button">
-        Coin
+      QuantumBit
       </button>
       <div className="touch-count">
         Touch Count: {touchCount}
