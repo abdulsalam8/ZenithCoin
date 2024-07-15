@@ -5,6 +5,7 @@ import Logo from './assets/logo.png';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import CoinButton from './CoinButton';
+import BottomBar from './BottomBar';
 
 const MAX_ENERGY = 3000;
 const REFILL_RATE = 50; 
@@ -53,6 +54,7 @@ const App: React.FC = () => {
       </div> */}
       {/* <b style={{ color: "white" }}>{loading ? <Skeleton width={50} /> : energy}</b> */}
       {/* <BottomBar /> */}
+      <BottomBar />
       <nav className="bottom-nav">
         <div className="nav-item active">
           <FaRegStar size={24} />
