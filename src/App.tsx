@@ -14,10 +14,7 @@ const App: React.FC = () => {
   const [count, setCount] = useState<number>(0);
   const [energy, setEnergy] = useState<number>(MAX_ENERGY);
   const [loading, setLoading] = useState<boolean>(true);
-  const disableScroll = () => {
-    document.body.classList.add('no-scroll');
-    document.documentElement.classList.add('no-scroll');
-  };
+
 
   const enableScroll = () => {
     document.body.classList.remove('no-scroll');
@@ -34,19 +31,7 @@ const App: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleImageClick = () => {
-    if (energy > 0) {
-      setCount((prevCount) => prevCount + 100);
-      setEnergy((prevEnergy) => Math.max(prevEnergy - 100, 0));
-      const imageElement = document.querySelector('.logo');
-      if (imageElement) {
-        imageElement.classList.add('pop');
-        setTimeout(() => {
-          imageElement.classList.remove('pop');
-        }, 300);
-      }
-    }
-  };
+
 
   useEffect(() => {
     return () => {
@@ -67,6 +52,7 @@ const App: React.FC = () => {
         <div className="energy" style={{ width: `${(energy / MAX_ENERGY) * 100}%` }}></div>
       </div> */}
       {/* <b style={{ color: "white" }}>{loading ? <Skeleton width={50} /> : energy}</b> */}
+      {/* <BottomBar /> */}
       <nav className="bottom-nav">
         <div className="nav-item active">
           <FaRegStar size={24} />
