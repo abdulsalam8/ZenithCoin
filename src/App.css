@@ -3,8 +3,7 @@
   margin: 0;
   padding: 2rem;
   text-align: center;
-  /* padding: 0; */
-  /* background-color: #747bff; */
+
 }
 
 body.no-scroll,
@@ -14,9 +13,6 @@ html.no-scroll {
 
 .app {
   text-align: center;
-  /* padding: 50px; */
-
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,7 +91,7 @@ html.no-scroll {
   outline: none;
 }
 
-/* Media Queries for Mobile Responsiveness */
+
 @media (max-width: 768px) {
   .counter {
     font-size: 3rem;
@@ -140,7 +136,7 @@ html.no-scroll {
 
 .active {
   border: #a79107f6 solid 2px;
-  /* padding: 5px; */
+
   border-radius: 10px;
   padding-inline: 20px;
 }
