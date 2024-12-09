@@ -53,24 +53,23 @@ const App: React.FC = () => {
         <div className="energy" style={{ width: `${(energy / MAX_ENERGY) * 100}%` }}></div>
       </div> */}
       {/* <b style={{ color: "white" }}>{loading ? <Skeleton width={50} /> : energy}</b> */}
-      {/* <BottomBar /> */}
-      {/* <BottomBar /> */}
+     
       <nav className="bottom-nav">
         <div className="nav-item active">
           <FaRegStar size={24} />
-          {/* <span>Ref</span> */}
+         
         </div>
         <div className="nav-item">
           <FaTasks size={24} />
-          {/* <span>Task</span> */}
+
         </div>
         <div className="nav-item">
           <FaRocket size={24} />
-          {/* <span>Boost</span> */}
+         
         </div>
         <div className="nav-item">
           <FaChartBar size={24} />
-          {/* <span>Stats</span> */}
+        
         </div>
       </nav>
     </div>
